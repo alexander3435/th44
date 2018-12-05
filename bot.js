@@ -2747,7 +2747,6 @@ client.on('message', async message => {
 if(message.author.bot) return;
 if (message.channel.guild) {
 if (message.content === 'رابط') {
-message.author.send(`رابط`).catch(RebeL =>{console.log('`Error`: ' + RebeL);
 message.channel.send(`${user} خاصك مقفول`);
 });
 }}});
