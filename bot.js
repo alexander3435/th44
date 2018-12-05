@@ -2742,14 +2742,7 @@ client.on('message', message => {
 
 
 
-client.on('message', async message => {
-     let user = message.mentions.users.first() || message.author;
-if(message.author.bot) return;
-if (message.channel.guild) {
-if (message.content === 'رابط') {
-message.channel.send(`${user} خاصك مقفول`);
-});
-}}});
+
 
 
 
