@@ -3528,10 +3528,6 @@ function play(guild, song) {
  
     serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }
-  
-   }
-   });
- 
  
 
 
