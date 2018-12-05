@@ -41,7 +41,7 @@ client.on('ready', () => {
 
 
     var ms = 20000 ;
-    var setGame = [ `! The Haven Server `,` ! ,Alexander ♪ ,🌹💔#2929 `,`iGameRi_YT#4156  `,` ! I'm Moshkela#9710` ];
+    var setGame = [ `! The Haven Server `,` ! ,7amo China ♪ ,🌹💔 `,`iGameRi_YT#4156  `,` ! I'm Moshkela#9710` ];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -3054,7 +3054,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     if (!message.channel.guild) return;
-    if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("***  ليس معك صلاحيات  ***")
+    if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("")
 
        if (message.content ===   prefix + "add role") { // اعطا جميع الاعضاء رتبة
     message.channel.send("<@" + message.author.id + ">  ***  جاري اعطاء الرتبة للاعضاء كما امرت  *** ")
@@ -3388,7 +3388,7 @@ client.on('message', async msg => {
                     .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
  
-                    .setFooter("By ! ,Alexander ♪ ,🌹💔#2929")
+                    .setFooter("By ! ,7amo China ♪ ,🌹💔")
                     msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
                    
                     // eslint-disable-next-line max-depth
@@ -3528,52 +3528,13 @@ function play(guild, song) {
  
     serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }
- 
-
-client.on("message", message => {
-    if (message.content === `${prefix}help`) {
-  const embed = new Discord.RichEmbed()
-      .setColor("#000000")
-      .setDescription(`
-${prefix}play ⇏ لتشغيل أغنية برآبط أو بأسم
-${prefix}skip ⇏ لتجآوز الأغنية الحآلية
-${prefix}stop ⇏ إيقآف الأغنية مؤقتا
-${prefix}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol ⇏ لتغيير درجة الصوت 100 - 0
-${prefix}leave⇏ لإخرآج البوت من الروم
-${prefix}np ⇏ لمعرفة الأغنية المشغلة حآليا
-${prefix}queue ⇏ لمعرفة قآئمة التشغيل
- `)
-   message.channel.sendEmbed(embed)
-   
+  
    }
    });
  
  
 
-const devs = ['الايدي تبعك' , '' , '' , ''];
-const adminprefix = "-";
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
-      
-  if (message.content.startsWith(adminprefix + 'pla')) {
-    client.user.setGame(argresult);
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'wt')) {
-  client.user.setActivity(argresult, {type:'watching'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'ls')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  }
-  });
+
 
 
 
